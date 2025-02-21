@@ -1,0 +1,15 @@
+package com.cdac.sarvam.service;
+
+import org.springframework.mail.SimpleMailMessage;
+
+public class EmailService {
+	public void sendEmail(String to, String subject, String body) {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(body);
+        message.setFrom("sanketahire2002@gmail.com"); // Must be your verified email
+
+        mailSender.send(message);
+    }
+}

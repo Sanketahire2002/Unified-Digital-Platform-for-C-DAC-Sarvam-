@@ -1,0 +1,33 @@
+package com.cdac.sarvam.dto;
+
+public class AttendanceDTO {
+    private Long PRN;
+    private String date;  // Ensure this is a string for easy parsing to LocalDate
+    private boolean status;
+    
+	@Override
+	public String toString() {
+		return "AttendanceDTO [PRN=" + PRN + ", date=" + date + ", status=" + status + "]";
+	}
+	
+	public Long getPRN() {
+		return PRN;
+	}
+	public void setPRN(Long pRN) {
+		PRN = pRN;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+    
+}

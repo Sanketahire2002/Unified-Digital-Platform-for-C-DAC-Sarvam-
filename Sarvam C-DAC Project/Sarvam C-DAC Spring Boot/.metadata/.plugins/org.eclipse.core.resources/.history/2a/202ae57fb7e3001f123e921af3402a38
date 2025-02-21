@@ -1,0 +1,13 @@
+package com.cdac.sarvam.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.cdac.sarvam.models.MasterAttendance;
+
+@Repository
+public interface MasterAttendanceRepository extends JpaRepository<MasterAttendance, Long> {
+	public List<MasterAttendance> findByMasterProfilePrn(Long prn);
+}

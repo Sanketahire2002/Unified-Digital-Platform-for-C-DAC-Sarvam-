@@ -1,0 +1,27 @@
+.parallax-about {
+  background-image: url(./AboutUsImage/about.jpg);
+  min-height: 00px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+.banner-tittle {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.card-img-top {
+  width: 200px;
+  /* Set the desired width */
+  height: 200px;
+  /* Set the desired height */
+  border-radius: 15px;
+  /* Set rounded corners */
+  object-fit: cover;
+  /* Ensures the image covers the area without distortion */
+}

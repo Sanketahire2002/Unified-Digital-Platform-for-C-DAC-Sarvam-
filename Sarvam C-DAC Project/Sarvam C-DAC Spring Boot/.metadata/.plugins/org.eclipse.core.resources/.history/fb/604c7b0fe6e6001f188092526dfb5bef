@@ -1,0 +1,22 @@
+package com.cdac.sarvam.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.cdac.sarvam.model.UserCredentials;
+import com.cdac.sarvam.service.UserCredentialsService;
+
+@RestController
+@RequestMapping("/api/users")
+public class UserCredentialsController {
+
+    @Autowired
+    private UserCredentialsService userCredentialsService;
+
+    @PostMapping("/register")
+    public ResponseEntity<UserCredentials> registerUser(@RequestBody UserCredentials user) {
+        UserCredentials savedUser = userCredentialsService.saveUser(user);
+        return ResponseEntity.ok(savedUser);
+    }
+}

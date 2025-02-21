@@ -1,0 +1,27 @@
+package com.cdac.sarvam.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class MasterAttendanceDTO {
+
+    private Long id;
+    private Long masterProfileId;
+    private LocalDateTime fromDate;
+    private LocalDateTime endDate;
+    private String subject;
+    private String description;
+    private Boolean status;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
+    // Other getters and setters can be added as needed
+}

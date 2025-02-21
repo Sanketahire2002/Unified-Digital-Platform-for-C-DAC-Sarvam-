@@ -1,0 +1,9 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/sarvam
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+stripe.api.secret.key=sk_test_51Qptht2LriASASPNxKcMwhdBkSK0xlG2nrG5u1yd82pvvDp8yHyanyLNe6Fgpc8MdrBvjqJP9FTroWBJtz83k6D700Rn7mEWND
+server.port=8080

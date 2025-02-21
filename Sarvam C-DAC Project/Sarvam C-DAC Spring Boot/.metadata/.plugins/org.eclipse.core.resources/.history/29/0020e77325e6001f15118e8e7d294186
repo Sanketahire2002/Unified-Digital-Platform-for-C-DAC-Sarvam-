@@ -1,0 +1,25 @@
+package com.cdac.sarvam.controller;
+
+import com.cdac.sarvam.service.CCATService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+
+@RestController
+@RequestMapping("/api/ccat")
+public class CCATController {
+
+    @Autowired
+    private CCATService ccatService;
+
+    @PostMapping("/admission")
+    public ResponseEntity<String> checkAdmission(@RequestBody Map<String, String> request) {
+        String formNumber = request.get("formNumber");
+        String password = request.get("password");
+        String response = ccatService.checkAdmission(formNumber, password);
+        System.out.println(response);
+        return ResponseEntity.ok(response);
+    }
+}

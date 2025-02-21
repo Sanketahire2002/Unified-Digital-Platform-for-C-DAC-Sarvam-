@@ -1,0 +1,143 @@
+/* Navbar.css */
+
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  border-bottom: 1px solid #444;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.gif-img {
+  width: 100px;
+  height: auto;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-link {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-link:active {
+  color: #007BFF;
+}
+
+/* Login Button */
+.login-button {
+  margin-right: 30px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007BFF;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hamburger Icon Styles (for Mobile) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 30px;
+  margin-left: 20px;
+}
+
+.hamburger-line {
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Mobile Menu (Visible when hamburger is clicked) */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+  padding: 10px 0;
+}
+
+.mobile-menu .navbar-link {
+  margin: 10px 0;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 710px) {
+
+  /* Change the navbar layout to column for mobile */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    display: none;
+    /* Hide default navbar links */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    /* Show hamburger icon on small screens */
+  }
+
+  /* Show mobile menu when active */
+  .navbar-links.mobile-active {
+    display: flex;
+  }
+
+  /* Remove margin on login button for mobile */
+  .login-button {
+    margin-right: 0;
+  }
+}
+
+.nav-item .btn.btn-primary {
+  background-color: rgb(0, 68, 253) !important;
+  /* Ensure it stays blue when active */
+  color: white !important;
+  /* Make the text white when active */
+}
+/* Ensure the color of Login text is always black with !important */
+/* Make the text black and important for always */
+.navbar-login-black-button {
+  color: black !important;
+}

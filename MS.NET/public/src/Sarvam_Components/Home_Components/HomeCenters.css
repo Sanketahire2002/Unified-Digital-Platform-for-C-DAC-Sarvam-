@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+  .card-body {
+    padding: 10px;  /* Reduce padding on smaller screens */
+  }
+  .bottom-left {
+    font-size: 14px;  /* Reduce font size on smaller screens */
+  }
+  .card-title {
+    font-size: 18px;  /* Adjust title font size on smaller screens */
+  }
+}

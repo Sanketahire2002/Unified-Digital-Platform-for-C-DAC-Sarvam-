@@ -1,0 +1,165 @@
+/* Ensure the body takes full height */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Sidebar width when expanded */
+    height: 100vh; /* Full height of the viewport */
+    padding-top: 60px; /* To push content below the header */
+    transition: transform 0.3s ease-in-out;
+    z-index: 100; /* Ensure sidebar stays on top */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-bottom: 50px; /* Ensure there's space at the bottom for scrolling */
+}
+
+.sidebar-closed {
+    width: 70px; /* Sidebar width when collapsed */
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Sidebar links */
+.sidebar-links li {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.sidebar-links li span {
+    margin-left: 10px; /* Add space between icon and text */
+}
+
+/* Hide the text when sidebar is collapsed */
+.sidebar-closed .sidebar-links li span {
+    display: none;
+}
+
+/* Button to toggle the collapse */
+.collapse-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #212529;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    width: 80px;
+}
+
+.main-content {
+    margin-left: 250px; /* Adjust the margin so content doesn't overlap with the sidebar */
+    padding-top: 80px; /* Push content below the header */
+    transition: margin-left 0.3s ease;
+}
+
+/* Adjust content position when sidebar is collapsed */
+.content-collapsed {
+    margin-left: 80px;
+}
+
+/* Adjust for smaller screens (Responsive) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Reduce sidebar width on smaller screens */
+    }
+
+    .main-content {
+        margin-left: 200px; /* Adjust margin for smaller sidebar */
+    }
+
+    .sidebar-closed {
+        width: 60px; /* Further reduce sidebar width on smaller screens */
+    }
+
+    .collapse-btn {
+        left: 50%;
+    }
+}
+
+/* Apply hover effect only on the specific elements */
+.hover-target:hover {
+    opacity: 0.8;
+  }
+  
+.notification-badge {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 2px solid white; /* Optional: Add a border for better visual clarity */
+}
+/* Optional: Adjust the appearance of the logout button */
+header .btn-outline-light {
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 20px; /* Rounded corners for the button */
+  }
+  
+
+  /* Add this to your existing AdminDashboard.css */
+
+/* Styling for the notification sidebar */
+.notification-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #343a40; /* Dark background */
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .notifications-list {
+    margin-top: 20px;
+  }
+  
+  .notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #666;
+  }
+  
+  .notification-item:hover {
+    background-color: #495057;
+  }
+  
+
+  /* Remove underline and set black color for all React Router links */
+a, .navbar a, .sidebar a, .menu a {
+    color: white !important; /* Ensure links are black */
+    text-decoration: none !important; /* Remove underline */
+  }
+  
+  a:hover {
+    color: rgb(0, 255, 30) !important; /* Optional: maintain black color on hover */
+    text-decoration: none !important; /* Optional: remove underline on hover */
+  }
+  
+
+.admin-assignment-custom-link {
+    color: rgb(0, 47, 255) !important;
+}
+.admin-assignment-custom-link:hover {
+    color: rgb(0, 34, 255) !important; /* Optional: maintain black color on hover */
+    font-weight: bold !important;
+    text-decoration: none !important; /* Optional: remove underline on hover */
+  }

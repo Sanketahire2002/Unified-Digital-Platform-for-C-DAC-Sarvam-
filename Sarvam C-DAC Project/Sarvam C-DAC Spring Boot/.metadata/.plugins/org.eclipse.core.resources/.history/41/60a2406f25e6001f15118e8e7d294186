@@ -1,0 +1,35 @@
+package com.cdac.sarvam.service;
+
+import com.cdac.sarvam.model.CCAT;
+import com.cdac.sarvam.repository.CCATRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+public class CCATService {
+
+    @Autowired
+    private CCATRepository ccatRepository;
+
+    public String checkAdmission(String formNumber, String password) {
+        Optional<CCAT> optionalCCAT = ccatRepository.findByFormNumber(formNumber);
+
+        if (optionalCCAT.isEmpty()) {
+            return "Not Found";
+        }
+
+        CCAT ccat = optionalCCAT.get();
+
+        if (!ccat.getPassword().equals(password)) {
+            return "Invalid Credentials";
+        }
+
+        if ("Active".equalsIgnoreCase(ccat.getStatus())) {
+            return "Already Admitted";
+        }
+
+        return ccat.toString(); // Returns all data if status is Inactive
+    }
+}

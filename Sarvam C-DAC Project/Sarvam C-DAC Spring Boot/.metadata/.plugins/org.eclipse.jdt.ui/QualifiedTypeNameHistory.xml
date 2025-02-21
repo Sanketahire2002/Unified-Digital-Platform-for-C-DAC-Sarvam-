@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.cdac.sarvam.controller.UserCredentialsController"/>
+    <fullyQualifiedTypeName name="com.cdac.sarvam.model.UserCredentials.Role"/>
+    <fullyQualifiedTypeName name="com.cdac.sarvam.model.UserCredentials.Status"/>
+    <fullyQualifiedTypeName name="com.cdac.sarvam.service.EmailService"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,35 @@
+/* BlogPage.css */
+
+/* News list container */
+.newsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Space between news items */
+    animation: moveUp 10s linear infinite;  /* Apply the animation here */
+    overflow: hidden;  /* Prevents items from overflowing outside the container */
+    position: relative;  /* So the animation can work within this area */
+    padding-top: 20px;  /* Optional: To add some padding above the news items */
+  }
+  
+  /* Keyframes for the animation */
+  @keyframes moveUp {
+    0% {
+      transform: translateY(100%); /* Start from bottom */
+      opacity: 0;  /* Fade in */
+    }
+    50% {
+      transform: translateY(0); /* Middle position, fully visible */
+      opacity: 1;  /* Fully visible */
+    }
+    100% {
+      transform: translateY(-100%); /* Move to top */
+      opacity: 0;  /* Fade out */
+    }
+  }
+  
+  .newsItem {
+    font-size: 1rem;
+    color: black;
+    opacity: 0.8;
+  }
+  

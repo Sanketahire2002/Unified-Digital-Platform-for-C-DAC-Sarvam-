@@ -1,0 +1,100 @@
+/* testimonial.css */
+
+/* General Styles */
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Card Image Styling */
+  .card-img-top {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+  
+  /* Card Content Styling */
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .text-muted {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  /* Slider Section */
+  .slick-slide {
+    padding: 0 15px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* For screens greater than 768px (Tablets and up) */
+  @media (min-width: 768px) {
+    .card-img-top {
+      width: 120px;
+      height: 120px;
+    }
+    .card-title {
+      font-size: 1.5rem;
+    }
+    .card-text {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* For screens smaller than 768px (Mobile devices) */
+  @media (max-width: 767px) {
+    .container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  
+    /* Adjust the slider to show only 1 card on small screens */
+    .slick-slide {
+      padding: 0 10px;
+    }
+  
+    .card-body {
+      padding: 1rem;
+    }
+  
+    .card-title {
+      font-size: 1rem;
+    }
+  
+    .card-text {
+      font-size: 0.9rem;
+    }
+  
+    /* Ensure image fits well on smaller screens */
+    .card-img-top {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  

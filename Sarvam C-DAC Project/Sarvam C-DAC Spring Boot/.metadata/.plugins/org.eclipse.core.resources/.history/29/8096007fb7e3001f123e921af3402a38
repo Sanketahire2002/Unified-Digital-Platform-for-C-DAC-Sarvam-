@@ -1,0 +1,11 @@
+package com.sarvam.repositories;
+
+import com.sarvam.models.MasterLeaveRequest;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MasterLeaveRequestRepository extends JpaRepository<MasterLeaveRequest, Long> {
+	List<MasterLeaveRequest> findByMasterProfile_Prn(Long prn);
+}

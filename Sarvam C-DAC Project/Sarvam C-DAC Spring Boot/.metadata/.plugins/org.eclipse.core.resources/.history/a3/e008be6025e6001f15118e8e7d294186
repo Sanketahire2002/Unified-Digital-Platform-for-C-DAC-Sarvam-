@@ -1,0 +1,5 @@
+package com.cdac.sarvam.dto;
+
+public class CCATResponse {
+
+}

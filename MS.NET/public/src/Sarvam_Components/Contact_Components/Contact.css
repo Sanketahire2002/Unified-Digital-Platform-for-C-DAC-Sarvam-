@@ -1,0 +1,98 @@
+/* Add background gradient and animation effects */
+.contact-container {
+    background: linear-gradient(135deg, #a2c2e5, #e3f3fd); /* Soft sky gradient */
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contact-heading {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  /* Add a floating effect to the form heading */
+  .form-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Style the form fields */
+  .contact-form .form-control {
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 12px 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: translateY(-3px);
+  }
+  
+  /* Submit button with hover effect */
+  .btn-send {
+    background-color: #007bff;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-send:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover effect for contact details */
+  .contact-details p:hover {
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 60px 20px;
+    }
+  
+    .contact-heading {
+      font-size: 2rem;
+    }
+  
+    .form-heading {
+      font-size: 1.8rem;
+    }
+  }
+  
+
+  
+
+  .contact-us-main-page-custom-link {
+    color: rgb(0, 0, 0) !important;
+}
+.contact-us-main-page-custom-link:hover {
+    color: rgb(0, 34, 255) !important; /* Optional: maintain black color on hover */
+    text-decoration: none !important; /* Optional: remove underline on hover */
+  }

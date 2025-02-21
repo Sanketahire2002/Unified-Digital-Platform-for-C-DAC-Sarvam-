@@ -1,0 +1,26 @@
+.carousel {
+    padding-top: 5px;
+    width: 100%;
+}
+
+/* For large screens */
+.carousel-image {
+    width: 100%;
+    height: 90vh; /* Use viewport height for scaling */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 50vh;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+    .carousel-image {
+        height: 35vh;
+        object-fit: contain; /* Ensure the full image is visible on small screens */
+    }
+}

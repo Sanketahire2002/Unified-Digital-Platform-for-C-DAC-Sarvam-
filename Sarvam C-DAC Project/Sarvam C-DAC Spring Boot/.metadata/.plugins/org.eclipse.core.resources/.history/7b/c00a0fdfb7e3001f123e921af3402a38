@@ -1,0 +1,34 @@
+package com.cdac.sarvam.service;
+
+import com.cdac.sarvam.model.MasterAttendance;
+import com.cdac.sarvam.model.MasterProfile;
+import com.cdac.sarvam.repositories.MasterAttendanceRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+import java.util.List;
+
+@Service
+public class MasterAttendanceService {
+
+    @Autowired
+    private MasterAttendanceRepository masterAttendanceRepository;
+
+    public List<MasterAttendance> getAllAttendance() {
+        return masterAttendanceRepository.findAll();
+    }
+    
+    public void saveAttendance(MasterProfile profile, LocalDate date, boolean status) {
+        MasterAttendance attendance = new MasterAttendance();
+        attendance.setProfile(profile);
+        attendance.setDate(date);
+        attendance.setStatus(status);
+
+        masterAttendanceRepository.save(attendance);
+    }
+    
+    public List<MasterAttendance> getAttendanceByPrn(Long prn) {
+        return masterAttendanceRepository.findByMasterProfilePrn(prn);
+    }
+}

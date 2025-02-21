@@ -1,0 +1,42 @@
+package com.cdac.sarvam.controller;
+
+import java.util.Random;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.cdac.sarvam.model.UserCredentials;
+import com.cdac.sarvam.service.UserCredentialsService;
+
+@RestController
+@RequestMapping("/api/users")
+public class UserCredentialsController {
+
+    @Autowired
+    private UserCredentialsService userCredentialsService;
+
+    @PostMapping("/register")
+    public ResponseEntity<UserCredentials> registerUser(@RequestBody UserCredentials user) {
+    	
+        UserCredentials savedUser = userCredentialsService.saveUser(user);
+        return ResponseEntity.ok(savedUser);
+    }
+    
+    public static long generateUnique12DigitNumber() {
+        Random random = new Random();
+        long uniqueNumber = Math.abs(UUID.randomUUID().getMostSignificantBits()) % 1000000000000L;
+        
+        // Ensure it is always 12 digits
+        while (uniqueNumber < 100000000000L) {
+            uniqueNumber = uniqueNumber * 10 + random.nextInt(10);
+        }
+        
+        return uniqueNumber;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Generated Unique Number: " + generateUnique12DigitNumber());
+    }
+}

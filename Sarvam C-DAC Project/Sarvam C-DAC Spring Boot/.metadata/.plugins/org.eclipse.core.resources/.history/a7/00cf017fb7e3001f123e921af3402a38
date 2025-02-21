@@ -1,0 +1,15 @@
+package com.cdac.sarvam.repository;
+
+import com.sarvam.models.MasterProfile;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface MasterProfileRepository extends JpaRepository<MasterProfile, Long> {
+    
+    // Custom query method to find users by role (assuming "STUDENT" role)
+    public List<MasterProfile> findByRole(MasterProfile.RoleEnum role); 
+    
+}

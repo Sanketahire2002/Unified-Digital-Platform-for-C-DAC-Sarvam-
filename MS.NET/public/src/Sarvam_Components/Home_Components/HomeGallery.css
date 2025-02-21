@@ -1,0 +1,92 @@
+/* Gallery container with a gradient background */
+.gallery-container {
+  background-size: cover;
+  padding: 60px 0;
+  color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Hide overflow for smooth transitions */
+}
+
+/* Title styling */
+.gallery-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+/* Gallery grid */
+.gallery-item {
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  padding: 5px;
+  border-radius: 10px; /* Border radius to round corners */
+}
+
+/* Image styling */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: scale, rotate, and shadow on image */
+.gallery-item:hover .gallery-image {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Shadow on hover */
+}
+
+/* Hover effect on gallery item: subtle lift */
+.gallery-item:hover {
+  transform: translateY(-10px); /* Lift the item */
+  opacity: 1;
+}
+
+/* Caption or text fade-in effect */
+.gallery-item:hover .gallery-title {
+  transform: translateY(-10px); /* Move title up when hovered */
+  opacity: 1;
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 768px) {
+  .gallery-title {
+      font-size: 2rem;
+  }
+
+  .gallery-item {
+      margin-bottom: 15px;
+      padding: 0; /* Remove padding for mobile */
+  }
+
+  /* Add a slight zoom-in effect on images */
+  .gallery-item:hover .gallery-image {
+      transform: scale(1.05) rotate(0deg);
+  }
+
+  .gallery-item:hover {
+      transform: translateY(0); /* No lift effect on mobile */
+  }
+}
+
+/* Smooth fade-in effect for gallery container */
+.gallery-container {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
